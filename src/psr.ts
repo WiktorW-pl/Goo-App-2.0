@@ -1,1 +1,1 @@
-const dupa = 10
+const option : Element[]  = [...document.querySelectorAll(".option")]
