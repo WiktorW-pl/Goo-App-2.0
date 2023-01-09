@@ -15,10 +15,12 @@ const gameProps: {
     losses: 0,
     draws: 0,
 }
+
 const ai = () =>{
     const aiChoice : number = Math.floor(Math.random() * 3);
     gameProps.aiPick = option[aiChoice].getAttribute('alt')
 }
+
     option.forEach((item) =>{
         item.addEventListener('click', ()=>{ 
             ai()
