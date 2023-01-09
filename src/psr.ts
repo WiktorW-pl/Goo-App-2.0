@@ -1,25 +1,37 @@
 const option = Array.from([...document.querySelectorAll(".option")]) as HTMLElement[];
 // const [rock, paper, scissors] = option
-let flag : boolean = true
-    option.forEach((item, index) =>{
-        item.addEventListener('click', ()=>{ 
-            option[index].style.border = 'red 2px solid';
-            console.log(flag)
-            // console.log(item, index)
-        })
-    })
-
-
-
-const ai = () =>{
-    const aiChoice : number = Math.floor(Math.random() * 3);
-    gameProps.aiPick = aiChoice
-}
-const gameProps = {
-    playerPick: 0,
-    aiPick: 0,
+const gameProps: {
+    playerPick: string | null,
+    aiPick: string | null,
+    games: number,
+    wins: number,
+    losses: number,
+    draws: number,
+} = {
+    playerPick: '',
+    aiPick: '',
     games: 0,
     wins: 0,
     losses: 0,
     draws: 0,
 }
+const ai = () =>{
+    const aiChoice : number = Math.floor(Math.random() * 3);
+    gameProps.aiPick = option[aiChoice].getAttribute('alt')
+}
+    option.forEach((item) =>{
+        item.addEventListener('click', ()=>{ 
+            ai()
+            for (let picked of option ){
+                picked.style.backgroundColor = 'red'
+            }
+            item.style.backgroundColor = 'green'
+            gameProps.playerPick = item.getAttribute('alt')
+            console.log(gameProps.playerPick)
+            console.log(gameProps.aiPick)
+        })
+    })
+
+    
+
+

@@ -13,7 +13,7 @@ h1, h2, p {
 }
 
 .option {
-  background-color: green;
+  background-color: rgb(16, 83, 170);
   width: 200px;
   height: 200px;
   margin: 10px;
