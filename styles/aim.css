@@ -1,0 +1,189 @@
+body {
+  background-color: #232323;
+  color: #fff;
+  font-family: Fira Code;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  transform: translateY(20px);
+}
+
+.title__text {
+  font-family: Fira Code;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -8px;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+
+.center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  margin: 0;
+  height: 650px;
+  width: 70%;
+  background-color: #232323;
+  border: 7px solid #fff;
+  border-radius: 30px;
+}
+
+.dot {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.dot:hover {
+  background-color: rgb(107, 107, 107);
+}
+
+.game-panel {
+  margin: 0;
+  height: 90px;
+  max-width: 100%;
+  background-color: #232323;
+  border: 7px solid #fff;
+  border-radius: 30px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.game-panel__button {
+  border: none;
+  width: 202px;
+  height: 41px;
+  background: #FFFFFF;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-style: normal;
+  font-family: Fira Code;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 16px;
+  letter-spacing: 7.5px;
+  text-transform: uppercase;
+  color: #232323;
+  cursor: pointer;
+}
+
+.game-panel__button-reset {
+  border: none;
+  width: 202px;
+  height: 41px;
+  background: #FFFFFF;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-style: normal;
+  font-family: Fira Code;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 16px;
+  letter-spacing: 7.5px;
+  text-transform: uppercase;
+  color: #232323;
+  cursor: pointer;
+}
+
+.game-panel__input {
+  margin-right: 20px;
+}
+
+@media only screen and (max-width: 1180px) {
+  .logo .logo__svg {
+    display: none;
+  }
+  .content {
+    transform: translateY(2%);
+  }
+}
+@media only screen and (max-width: 1180px) {
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    transform: translateY(-20px);
+  }
+  .title__img {
+    width: 71px;
+    height: 71px;
+  }
+  .title__text {
+    font-family: Fira Code;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 34px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    margin-left: 20px;
+  }
+  .content {
+    transform: translateY(10%);
+  }
+  .app {
+    margin: 0;
+    height: 650px;
+    max-width: 100%;
+    background-color: #232323;
+    border: 7px solid #fff;
+    border-radius: 30px;
+  }
+  .game-panel {
+    margin: 0;
+    height: auto;
+    max-width: 100%;
+    background-color: #232323;
+    border: 7px solid #fff;
+    border-radius: 30px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .game-panel__button {
+    border: none;
+    width: 202px;
+    height: 41px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-style: normal;
+    font-family: Fira Code;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 16px;
+    letter-spacing: 7.5px;
+    text-transform: uppercase;
+    color: #232323;
+    cursor: pointer;
+  }
+  .game-panel__item {
+    margin: 10px;
+  }
+} /*# sourceMappingURL=style.css.map *//*# sourceMappingURL=aim.css.map */
