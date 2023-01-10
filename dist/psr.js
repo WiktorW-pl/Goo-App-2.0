@@ -1,6 +1,13 @@
 "use strict";
 const option = Array.from([...document.querySelectorAll(".option")]);
-// const [rock, paper, scissors] = option
+const btn = document.querySelector('button');
+const gamesDisplay = document.querySelector('#games');
+const winsDisplay = document.querySelector('#wins');
+const lossesDisplay = document.querySelector('#losess');
+const drawsDisplay = document.querySelector('#draws');
+const playerPickDisplay = document.querySelector('#player-pick');
+const aiPickDisplay = document.querySelector('#ai-pick');
+const winnerDisplay = document.querySelector('#winner');
 const gameProps = {
     playerPick: '',
     aiPick: '',
@@ -8,6 +15,7 @@ const gameProps = {
     wins: 0,
     losses: 0,
     draws: 0,
+    winner: ''
 };
 const ai = () => {
     const aiChoice = Math.floor(Math.random() * 3);
@@ -15,13 +23,45 @@ const ai = () => {
 };
 option.forEach((item) => {
     item.addEventListener('click', () => {
-        ai();
         for (let picked of option) {
             picked.style.backgroundColor = 'red';
         }
         item.style.backgroundColor = 'green';
         gameProps.playerPick = item.getAttribute('alt');
-        console.log(gameProps.playerPick);
-        console.log(gameProps.aiPick);
     });
 });
+const compareSelection = () => {
+    gameProps.games++;
+    if (gameProps.playerPick === '') {
+        gameProps.games--;
+        alert('Wybierz łapkę mordko');
+        return;
+    }
+    if (gameProps.playerPick === gameProps.aiPick) {
+        gameProps.draws++;
+        gameProps.winner = "Nobody :(";
+    }
+    if (gameProps.playerPick === 'Rock' && gameProps.aiPick === 'Paper' || gameProps.playerPick === 'Paper' && gameProps.aiPick === 'Scissors' || gameProps.playerPick === 'Scissors' && gameProps.aiPick === 'Rock') {
+        gameProps.losses++;
+        gameProps.winner = "Computer";
+    }
+    if (gameProps.playerPick === 'Rock' && gameProps.aiPick === 'Scissors' || gameProps.playerPick === 'Paper' && gameProps.aiPick === 'Rock' || gameProps.playerPick === 'Scissors' && gameProps.aiPick === 'Paper') {
+        gameProps.wins++;
+        gameProps.winner = "You!";
+    }
+};
+const displayStats = () => {
+    gamesDisplay && (gamesDisplay.textContent = gameProps.winner);
+    winsDisplay && (winsDisplay.textContent = gameProps.wins.toString());
+    lossesDisplay && (lossesDisplay.textContent = gameProps.losses.toString());
+    drawsDisplay && (drawsDisplay.textContent = gameProps.draws.toString());
+    playerPickDisplay && (playerPickDisplay.textContent = gameProps.playerPick);
+    aiPickDisplay && (aiPickDisplay.textContent = gameProps.aiPick);
+    winnerDisplay && (winnerDisplay.textContent = gameProps.winner);
+};
+const startGame = () => {
+    ai();
+    compareSelection();
+    displayStats();
+};
+btn === null || btn === void 0 ? void 0 : btn.addEventListener('click', startGame);
