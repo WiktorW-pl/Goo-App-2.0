@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/img/main-logo.png">
+    <link rel="stylesheet" href="../styles/todo.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <title>Goo App</title>
+</head>
+<body>
+    <div class="content">
+    <div class="content content-todo" data-router-view="home">
+        <h2 class="info"></h2>
+        <div class="app-todo">
+            <!-- <div class="task">
+               <textarea  class="task__input" placeholder="">dsadas</textarea><div id="color"></div>
+               <input class="task__checkbox" type="checkbox" name="" id=""> 
+            </div>  -->
+             <!-- 
+            <div class="task">
+               <input class="task__input" type="text"><input class="task__checkbox" type="checkbox" name="" id="">
+            </div> -->
+        </div>
+        <div class="buttons">      
+            <div class="add-btn">
+                <button class="add-note">Add task</button>
+            </div>
+            <div class="remove-btn">
+                <button class="remove-note">remove task</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="side-note-panel">
+        <button class="add-note">Add side note</button>
+        <button class="remove-note">Remove side note</button>
+    </div>
+    </div>
+    <script src="../dist/todo.js"></script>
+</body>
+</html>
