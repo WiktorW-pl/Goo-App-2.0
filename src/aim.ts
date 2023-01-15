@@ -1,7 +1,10 @@
 const game_board = document.querySelector('.app') as HTMLDivElement
 const start_btn = document.querySelector('.game-panel__button') as HTMLButtonElement;
-const dificulty_lvl = 10;
-
+let difficulty_lvl : number = 10;
+let is_game_started: boolean = false;
+let game_time = 0;
+let difficulty_name : string
+let blink_time = 1000
 const start_game = () => {
     generate_point()
 } 
@@ -10,33 +13,50 @@ const generate_point = () => {
     const created_dot : HTMLElement = document.createElement('div');
     game_board.appendChild(created_dot);
     created_dot.classList.add('dot');
+    game_difficulty_panel(created_dot)
+}
+
+const game_difficulty_panel = (created_dot : HTMLElement) => {
+    const options =  Array.from(document.querySelectorAll('input[name="difficulty"]')) as HTMLInputElement[];
+    for (const option of options) {
+    if (option.checked) {
+        difficulty_name = option.value;
+    }
+    }
+    set_game_props(difficulty_name)
     move_point(created_dot)
 }
 
+const set_game_props = (difficulty_name : string) =>{
+    if(difficulty_name === 'easy'){
+        difficulty_lvl = 10
+        blink_time = 1000
+    } else if(difficulty_name === 'medium'){
+        difficulty_lvl = 20
+        blink_time = 750
+    }
+    else if(difficulty_name === 'hard'){
+        difficulty_lvl = 25
+        blink_time = 500
+    }
+}
 const move_point = (created_dot : HTMLElement) => {
-    setInterval(()=>{
-
+    is_game_started = true
+    const game_interval = setInterval(()=>{
+    console.log(difficulty_lvl, blink_time)
+        game_time++
         const x_min : number = game_board.offsetLeft;
         const x_max : number = game_board.offsetLeft + game_board.offsetWidth;
         const y_min : number = game_board.offsetTop;
         const y_max : number = game_board.offsetTop + game_board.offsetHeight;
 
-        const x = Math.floor(Math.random() * (x_max - x_min + dificulty_lvl)) + x_min;
-        const y = Math.floor(Math.random() * (y_max - y_min + dificulty_lvl)) + y_min;
-        created_dot.style.left = x + 'px';
-        created_dot.style.top = y + 'px';
-    }, 1000)
+        const x = Math.floor(Math.random() * (x_max - x_min + difficulty_lvl)) + x_min;
+        const y = Math.floor(Math.random() * (y_max - y_min + difficulty_lvl)) + y_min;
+        // console.log(x, y)
+        created_dot.style.left = (x - 61) + 'px';
+        created_dot.style.top = (y - 61) + 'px';
+        if(game_time === 30)  clearInterval(game_interval)
+    }, blink_time)
 }
 
 start_btn.addEventListener('click', start_game)
-
-
-
-
-
-
-
-
-
-
-//
