@@ -21,7 +21,12 @@ const buildTask = () => {
     setPriority(priority);
 };
 const setPriority = (priority) => {
-    priority.style.borderRight = '3px solid green';
+    const elements = document.querySelectorAll('.color');
+    elements.forEach(element => {
+        element.addEventListener('click', e => {
+            e.target.classList.add('high-prio');
+        });
+    });
 };
 const saveTask = (taskContainer, checkbox, priority) => {
     const taskObj = {

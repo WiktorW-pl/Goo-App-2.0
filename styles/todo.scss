@@ -186,6 +186,12 @@ header{
     transform: translateX(-16px);
     border-right: 5px solid;
 }
+// .normal-prio{
+//     border-right: 3px solid green;
+// }
+.high-prio{
+    border-right: 5px solid red;
+}
 .high:hover, .medium:hover, .low:hover{
     cursor: pointer;
     opacity: 0.5;
