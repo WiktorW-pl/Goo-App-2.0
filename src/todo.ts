@@ -2,12 +2,7 @@ const addTaskBtn = document.querySelector('.add-btn') as HTMLButtonElement
 const removeTaskBtn = document.querySelector('.remove-btn') as HTMLButtonElement
 const appContainer = document.querySelector('.app-todo') as HTMLElement
 
-<<<<<<< HEAD
-
 let tasksList: any = []
-=======
-const tasksList: any = []
->>>>>>> 22ad24bf4e79506121cb82825e3397826c2fda57
 
 const buildTask = () =>{
     const taskContainer = document.createElement('div');
