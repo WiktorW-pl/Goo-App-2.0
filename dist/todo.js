@@ -3,7 +3,10 @@ const addTaskBtn = document.querySelector('.add-btn');
 const removeTaskBtn = document.querySelector('.remove-btn');
 const appContainer = document.querySelector('.app-todo');
 let tasksList = [];
+let dupa = 10;
+const duzaDupa = dupa + 'chuj';
 const buildTask = () => {
+    console.log(duzaDupa);
     const taskContainer = document.createElement('div');
     appContainer.appendChild(taskContainer);
     taskContainer.classList.add('task');

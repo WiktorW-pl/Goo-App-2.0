@@ -13,34 +13,25 @@
     <title>Goo App</title>
 </head>
 <body>
-    <div class="content">
-    <div class="content content-todo" data-router-view="home">
-        <h2 class="info"></h2>
-        <div class="app-todo">
-            <!-- <div class="task">
-               <textarea  class="task__input" placeholder="">dsadas</textarea><div id="color"></div>
-               <input class="task__checkbox" type="checkbox" name="" id=""> 
-            </div>  -->
-             <!-- 
-            <div class="task">
-               <input class="task__input" type="text"><input class="task__checkbox" type="checkbox" name="" id="">
-            </div> -->
-        </div>
-        <div class="buttons">      
-            <div class="add-btn">
-                <button class="add-note">Add task</button>
-            </div>
-            <div class="remove-btn">
-                <button class="remove-note">remove task</button>
-            </div>
-        </div>
+    <header>
+        <img class="header__img" src="../img/main_logo.png" alt="">
+    </header>
+    <div class="align-to-right">
+        <div class="buttons">
+            <button class="buttons__add">Add</button>
+            <button class="buttons__remove">remove</button>
+        </div>   
     </div>
-</div>
-    <div class="side-note-panel">
-        <button class="add-note">Add side note</button>
-        <button class="remove-note">Remove side note</button>
-    </div>
-    </div>
+    <div class="tasks-container">
+        <div class="task">
+            <textarea  class="task__input" placeholder="">dsadas</textarea><div id="color"></div>
+            <input class="task__checkbox" type="checkbox" name="" id=""> 
+        </div> 
+    <!-- 
+    <div class="task">
+        <input class="task__input" type="text"><input class="task__checkbox" type="checkbox" name="" id="">
+    </div> -->
+    </div>  
     <script src="../dist/todo.js"></script>
 </body>
 </html>
