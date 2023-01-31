@@ -35,10 +35,36 @@ header {
   transform: translateY(-90px);
 }
 
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#task__label {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #D9D9D9;
+  display: block;
+  transform: translateX(-30px);
+}
+
+input:checked + #task__label {
+  background-color: #EF233C;
+}
+
 .task {
   width: 684px;
   height: 89px;
   background-color: #3A3D59;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .task__input {
   width: 100%;
@@ -48,4 +74,8 @@ header {
   color: white;
   line-height: 89px;
   text-align: center;
+  resize: none;
+}
+.task__checkbox {
+  transform: translateX(-30px);
 }/*# sourceMappingURL=todo.css.map */
