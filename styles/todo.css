@@ -58,6 +58,22 @@ input:checked + #task__label {
   background-color: #EF233C;
 }
 
+.task__drag {
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  height: 30px;
+  transform: translateY(1px);
+  cursor: pointer;
+}
+
+.drag__line {
+  background-color: #D9D9D9;
+  width: 30px;
+  height: 1px;
+  margin-top: 6px;
+}
+
 .task {
   width: 684px;
   height: 89px;
@@ -78,4 +94,9 @@ input:checked + #task__label {
 }
 .task__checkbox {
   transform: translateX(-30px);
+}
+.task__priority {
+  height: 100%;
+  width: 12px;
+  background-color: #D9D9D9;
 }/*# sourceMappingURL=todo.css.map */

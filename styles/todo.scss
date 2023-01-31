@@ -41,19 +41,34 @@ header{
     position: absolute;
     white-space: nowrap;
     width: 1px;
-  }
+}
 
-  #task__label {
+#task__label {
     width: 15px;
     height: 15px;
     border: 1px solid #D9D9D9;
     display: block;
     transform: translateX(-30px);
-  }
+}
 
-  input:checked + #task__label {
+input:checked + #task__label {
     background-color: #EF233C;
-  }
+}
+
+.task__drag{
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    height: 30px;
+    transform: translateY(1px);
+    cursor: pointer;
+}
+.drag__line{
+    background-color: #D9D9D9;
+    width: 30px;
+    height: 1px;
+    margin-top: 6px;
+}
 
 .task{
     width: 684px;
@@ -74,5 +89,10 @@ header{
     }
     &__checkbox{
         transform: translateX(-30px);
+    }
+    &__priority{
+        height: 100%;
+        width: 12px;
+        background-color: #D9D9D9;
     }
 }
