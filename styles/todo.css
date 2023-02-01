@@ -39,6 +39,8 @@ header {
   display: flex;
   justify-content: center;
   height: 100px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .visually-hidden {
@@ -87,6 +89,7 @@ input:checked + #task__label {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: 10px;
 }
 .task__input {
   width: 100%;

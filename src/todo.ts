@@ -1,6 +1,6 @@
-const addTaskBtn = document.querySelector('.add-btn') as HTMLButtonElement
-const removeTaskBtn = document.querySelector('.remove-btn') as HTMLButtonElement
-const appContainer = document.querySelector('.app-todo') as HTMLElement
+const addTaskBtn = document.querySelector('.buttons__add') as HTMLButtonElement
+const removeTaskBtn = document.querySelector('.buttons__remove') as HTMLButtonElement
+const appContainer = document.querySelector('.tasks-container') as HTMLElement
 
 let tasksList: any = []
 
@@ -9,10 +9,26 @@ const buildTask = () =>{
         appContainer.appendChild(taskContainer);  
         taskContainer.classList.add('task');
 
+    const label = document.createElement('label')
+        taskContainer.appendChild(label)
+        label.classList.add('visually-hidden')
+        label.id = "task__label"
+        label.setAttribute("for", "task__checkbox");
+        
     const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
         taskContainer.appendChild(checkbox);
         checkbox.classList.add('task__checkbox');
+
+    const grabTask = document.createElement('div')
+        taskContainer.appendChild(grabTask)
+        grabTask.classList.add('task__drag')
+
+    for (let i = 0; i < 3; i++) {
+        const grabLine = document.createElement('span')
+        grabTask.appendChild(grabLine)
+        grabLine.classList.add('drag__line')
+    }
 
     const taskValue = document.createElement('textarea');
         taskContainer.appendChild(taskValue);
@@ -20,20 +36,20 @@ const buildTask = () =>{
 
     const priority = document.createElement('div');
         taskContainer.appendChild(priority);
-        priority.classList.add('color');
+        priority.classList.add('task__priority');
 
     saveTask(taskContainer, checkbox, priority)
-    setPriority(priority)
+    // setPriority(priority)
 }
 
-const setPriority = (priority: any) =>{
-    const elements = document.querySelectorAll('.color');
-    elements.forEach(element => {
-        element.addEventListener('click', e => {
-          e.target.classList.add('high-prio')
-        });
-      });
-}
+// const setPriority = (priority: any) =>{
+//     const elements = document.querySelectorAll('.color');
+//     elements.forEach(element => {
+//         element.addEventListener('click', e => {
+//           e.target.classList.add('high-prio')
+//         });
+//       });
+// }
 
 const saveTask = (taskContainer: HTMLDivElement, checkbox: HTMLElement, priority: HTMLElement) =>{
     const taskObj = {
