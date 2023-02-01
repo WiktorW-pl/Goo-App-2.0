@@ -3,6 +3,7 @@ body {
   color: #000;
   font-family: Fira Code;
   margin: 0;
+  overflow-y: hidden;
 }
 
 header {
@@ -34,11 +35,16 @@ header {
   cursor: pointer;
 }
 
-.tasks-container {
+.center {
   width: 100%;
   display: flex;
   justify-content: center;
-  height: 100px;
+}
+
+.tasks-container {
+  width: 800px;
+  display: flex;
+  max-height: 80vh;
   flex-direction: column;
   align-items: center;
 }
@@ -101,11 +107,27 @@ input:checked + #task__label {
   text-align: center;
   resize: none;
 }
-.task__checkbox {
-  transform: translateX(-30px);
-}
 .task__priority {
   height: 100%;
   width: 12px;
   background-color: #D9D9D9;
+}
+
+#task__checkbox {
+  transform: translateX(-30px);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255);
+  border: #232323 3px solid;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #707070;
+  cursor: pointer;
+  transform: translateX(-100px);
 }/*# sourceMappingURL=todo.css.map */

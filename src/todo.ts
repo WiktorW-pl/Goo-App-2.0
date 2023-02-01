@@ -8,17 +8,11 @@ const buildTask = () =>{
     const taskContainer = document.createElement('div');
         appContainer.appendChild(taskContainer);  
         taskContainer.classList.add('task');
-
-    const label = document.createElement('label')
-        taskContainer.appendChild(label)
-        label.classList.add('visually-hidden')
-        label.id = "task__label"
-        label.setAttribute("for", "task__checkbox");
         
     const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
         taskContainer.appendChild(checkbox);
-        checkbox.classList.add('task__checkbox');
+        checkbox.id = 'task__checkbox';
 
     const grabTask = document.createElement('div')
         taskContainer.appendChild(grabTask)
