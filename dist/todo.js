@@ -4,6 +4,10 @@ const removeTaskBtn = document.querySelector('.buttons__remove');
 const appContainer = document.querySelector('.tasks-container');
 let tasksList = [];
 const buildTask = () => {
+    if (tasksList.length === 6) {
+        appContainer.style.overflowY = 'scroll';
+        appContainer.style.overflowX = 'hidden';
+    }
     const taskContainer = document.createElement('div');
     appContainer.appendChild(taskContainer);
     taskContainer.classList.add('task');
@@ -14,11 +18,9 @@ const buildTask = () => {
     const grabTask = document.createElement('div');
     taskContainer.appendChild(grabTask);
     grabTask.classList.add('task__drag');
-    for (let i = 0; i < 3; i++) {
-        const grabLine = document.createElement('span');
-        grabTask.appendChild(grabLine);
-        grabLine.classList.add('drag__line');
-    }
+    const grabLine = document.createElement('span');
+    grabTask.appendChild(grabLine);
+    grabLine.classList.add('drag__line');
     const taskValue = document.createElement('textarea');
     taskContainer.appendChild(taskValue);
     taskValue.classList.add('task__input');
@@ -45,6 +47,10 @@ const saveTask = (taskContainer, checkbox, priority) => {
     tasksList.push(taskObj);
 };
 const removeTask = () => {
+    if (6 >= tasksList.length) {
+        appContainer.style.overflowY = '';
+        appContainer.style.overflowX = '';
+    }
     tasksList = tasksList.filter(item => {
         if (item.isDone.checked) {
             item.task.remove();

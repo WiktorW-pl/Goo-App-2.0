@@ -6,6 +6,28 @@ body{
     overflow-y: hidden;
 }
 
+.align-to-right{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.center{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
 header{
     width: 100%;
     height: auto;
@@ -15,11 +37,7 @@ header{
     width: 100%; 
     max-width: 350px;
 }
-.align-to-right{
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-}
+
 .buttons{
     background-color: #737E93;
     height: 90px;
@@ -33,28 +51,13 @@ header{
     }
 }   
 
-.center{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
 .tasks-container{
-    width: 800px;
+    width: auto;
     display: flex;
     max-height: 80vh;
     flex-direction: column;
     align-items: center;
-}
-
-.visually-hidden {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
+    padding: 0px 30px 0px 30px;
 }
 
 #task__label {
@@ -77,6 +80,19 @@ input:checked + #task__label {
     transform: translateY(-1px);
     cursor: pointer;
 }
+
+@mixin drag-line{
+    content: '';
+    background-color: #D9D9D9;
+    width: 30px;
+    height: 2px;
+    margin-top: 6px;
+}
+
+.task__drag::after, .task__drag::before{
+    @include drag-line();
+}
+
 .drag__line{
     background-color: #D9D9D9;
     width: 30px;
@@ -113,11 +129,11 @@ input:checked + #task__label {
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 2px;
 }
 ::-webkit-scrollbar-thumb {
-    background: rgb(255, 255, 255); 
-    border: #232323 3px solid;
+    background: #D9D9D9
+    // border: #232323 3px solid;
   }
   
 ::-webkit-scrollbar-thumb:hover {
