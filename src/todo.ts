@@ -1,5 +1,5 @@
-const addTaskBtn = document.querySelector('.buttons__add') as HTMLButtonElement
-const removeTaskBtn = document.querySelector('.buttons__remove') as HTMLButtonElement
+const addTaskBtn = document.querySelector('.button-add') as HTMLButtonElement
+const removeTaskBtn = document.querySelector('.button-remove') as HTMLButtonElement
 const appContainer = document.querySelector('.tasks-container') as HTMLElement
 
 let tasksList: any = []
