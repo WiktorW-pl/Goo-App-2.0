@@ -1,6 +1,6 @@
 "use strict";
-const addTaskBtn = document.querySelector('.buttons__add');
-const removeTaskBtn = document.querySelector('.buttons__remove');
+const addTaskBtn = document.querySelector('.button-add');
+const removeTaskBtn = document.querySelector('.button-remove');
 const appContainer = document.querySelector('.tasks-container');
 let tasksList = [];
 const buildTask = () => {
