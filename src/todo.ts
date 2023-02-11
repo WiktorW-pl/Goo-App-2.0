@@ -95,6 +95,7 @@ const saveTask = (taskContainer: HTMLDivElement, checkbox: HTMLElement, priority
         priority: priority
     }        
     tasksList.push(taskObj)
+     tasksList[0].task.style.marginTop = "0px"
 }
 
 const removeTask = () =>{

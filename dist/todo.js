@@ -84,6 +84,7 @@ const saveTask = (taskContainer, checkbox, priority) => {
         priority: priority
     };
     tasksList.push(taskObj);
+    tasksList[0].task.style.marginTop = "0px";
 };
 const removeTask = () => {
     if (6 >= tasksList.length) {
