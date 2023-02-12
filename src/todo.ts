@@ -5,10 +5,10 @@ const appContainer = document.querySelector('.tasks-container') as HTMLElement
 let tasksList: any = []
 
 const buildTask = () =>{
-    if(tasksList.length === 6){
-        appContainer.style.overflowY = 'scroll';
-        appContainer.style.overflowX = 'hidden';
-    }
+    // if(tasksList.length === 6){
+    //     appContainer.style.overflowY = 'scroll';
+    //     appContainer.style.overflowX = 'hidden';
+    // }
     const taskContainer = document.createElement('div');
         appContainer.appendChild(taskContainer);  
         taskContainer.classList.add('task');
@@ -38,7 +38,6 @@ const buildTask = () =>{
         priority.classList.add('task__priority');
 
     saveTask(taskContainer, checkbox, priority)
-    // setPriority(priority)
     dragTask()
 }
 
@@ -79,14 +78,6 @@ const getDragAfterElement = (y) =>{
         }
       }, { offset: Number.NEGATIVE_INFINITY }).element
 }
-// const setPriority = (priority: any) =>{
-//     const elements = document.querySelectorAll('.color');
-//     elements.forEach(element => {
-//         element.addEventListener('click', e => {
-//           e.target.classList.add('high-prio')
-//         });
-//       });
-// }
 
 const saveTask = (taskContainer: HTMLDivElement, checkbox: HTMLElement, priority: HTMLElement) =>{
     const taskObj = {
@@ -95,14 +86,14 @@ const saveTask = (taskContainer: HTMLDivElement, checkbox: HTMLElement, priority
         priority: priority
     }        
     tasksList.push(taskObj)
-     tasksList[0].task.style.marginTop = "0px"
+    //  tasksList[0].task.style.marginTop = "0px"
 }
 
 const removeTask = () =>{
-    if(6 >= tasksList.length){
-        appContainer.style.overflowY = '';
-        appContainer.style.overflowX = '';
-    }
+    // if(6 >= tasksList.length){
+    //     appContainer.style.overflowY = '';
+    //     appContainer.style.overflowX = '';
+    // }
     tasksList = tasksList.filter(item => {
         if (item.isDone.checked) {
           item.task.remove();
@@ -114,3 +105,16 @@ const removeTask = () =>{
 
 addTaskBtn.addEventListener('click', buildTask);
 removeTaskBtn.addEventListener('click', removeTask);
+
+const controlBar = document.querySelector('.control-bar')
+document.addEventListener('scroll', () => {
+    console.log(window.scrollY)
+    if(window.scrollY >= 165){
+        controlBar.style.position = 'fixed'
+        controlBar.style.zIndex = '100'
+        controlBar.style.top = '0'
+    }
+    else{
+        controlBar.style.position = ''
+    }
+})
