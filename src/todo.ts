@@ -101,7 +101,7 @@ const removeTask = (): void => {
       }
       return true;
     });
-  };
+};
    
   const controlBar = document.querySelector('.control-bar') as HTMLElement;
   document.addEventListener('scroll', (): void => {
@@ -114,5 +114,5 @@ const removeTask = (): void => {
     }
   });
 
-  addTaskBtn.addEventListener('click', buildTask);
-  removeTaskBtn.addEventListener('click', removeTask);
+addTaskBtn.addEventListener('click', buildTask);
+removeTaskBtn.addEventListener('click', removeTask);
