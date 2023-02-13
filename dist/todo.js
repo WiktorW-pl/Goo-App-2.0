@@ -94,7 +94,6 @@ addTaskBtn.addEventListener('click', buildTask);
 removeTaskBtn.addEventListener('click', removeTask);
 const controlBar = document.querySelector('.control-bar');
 document.addEventListener('scroll', () => {
-    console.log(window.scrollY);
     if (window.scrollY >= 165) {
         controlBar.style.position = 'fixed';
         controlBar.style.zIndex = '100';
