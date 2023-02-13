@@ -103,8 +103,8 @@ const removeTask = (): void => {
     });
 };
    
-  const controlBar = document.querySelector('.control-bar') as HTMLElement;
-  document.addEventListener('scroll', (): void => {
+const controlBar = document.querySelector('.control-bar') as HTMLElement;
+document.addEventListener('scroll', (): void => {
     if (window.scrollY >= 165) {
       controlBar.style.position = 'fixed';
       controlBar.style.zIndex = '100';
@@ -112,7 +112,7 @@ const removeTask = (): void => {
     } else {
       controlBar.style.position = '';
     }
-  });
+});
 
 addTaskBtn.addEventListener('click', buildTask);
 removeTaskBtn.addEventListener('click', removeTask);
