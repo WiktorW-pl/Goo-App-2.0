@@ -2,17 +2,17 @@
 const addTaskBtn = document.querySelector('.button-add');
 const removeTaskBtn = document.querySelector('.button-remove');
 const appContainer = document.querySelector('.tasks-container');
+const info = document.querySelector('.info');
 let tasksList = [];
 const buildTask = () => {
-    // if(tasksList.length === 6){
-    //     appContainer.style.overflowY = 'scroll';
-    //     appContainer.style.overflowX = 'hidden';
-    // }
+    if (tasksList.length >= 0) {
+        info.style.display = 'none';
+    }
     const taskContainer = document.createElement('div');
     appContainer.appendChild(taskContainer);
     taskContainer.classList.add('task');
     taskContainer.classList.add('draggable');
-    taskContainer.setAttribute("draggable", true);
+    taskContainer.setAttribute('draggable', 'true');
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     taskContainer.appendChild(checkbox);
@@ -43,11 +43,11 @@ const dragTask = () => {
             draggable.classList.remove('dragging');
         });
     });
-    appContainer.addEventListener('dragover', (e) => {
+    appContainer.addEventListener('dragover', e => {
         e.preventDefault();
         const afterElement = getDragAfterElement(e.clientY);
         const draggable = document.querySelector('.dragging');
-        if (afterElement == null) {
+        if (afterElement === null) {
             appContainer.appendChild(draggable);
         }
         else {
@@ -75,13 +75,8 @@ const saveTask = (taskContainer, checkbox, priority) => {
         priority: priority
     };
     tasksList.push(taskObj);
-    //  tasksList[0].task.style.marginTop = "0px"
 };
 const removeTask = () => {
-    // if(6 >= tasksList.length){
-    //     appContainer.style.overflowY = '';
-    //     appContainer.style.overflowX = '';
-    // }
     tasksList = tasksList.filter(item => {
         if (item.isDone.checked) {
             item.task.remove();
@@ -90,8 +85,6 @@ const removeTask = () => {
         return true;
     });
 };
-addTaskBtn.addEventListener('click', buildTask);
-removeTaskBtn.addEventListener('click', removeTask);
 const controlBar = document.querySelector('.control-bar');
 document.addEventListener('scroll', () => {
     if (window.scrollY >= 165) {
@@ -103,3 +96,5 @@ document.addEventListener('scroll', () => {
         controlBar.style.position = '';
     }
 });
+addTaskBtn.addEventListener('click', buildTask);
+removeTaskBtn.addEventListener('click', removeTask);

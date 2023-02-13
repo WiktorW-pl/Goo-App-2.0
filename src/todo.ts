@@ -1,70 +1,75 @@
-const addTaskBtn = document.querySelector('.button-add') as HTMLButtonElement
-const removeTaskBtn = document.querySelector('.button-remove') as HTMLButtonElement
-const appContainer = document.querySelector('.tasks-container') as HTMLElement
-
-let tasksList: any = []
-
-const buildTask = () =>{
-    // if(tasksList.length === 6){
-    //     appContainer.style.overflowY = 'scroll';
-    //     appContainer.style.overflowX = 'hidden';
-    // }
+interface Task {
+    task: HTMLDivElement;
+    isDone: HTMLElement;
+    priority: HTMLElement;
+  }
+  
+  const addTaskBtn = document.querySelector('.button-add') as HTMLButtonElement;
+  const removeTaskBtn = document.querySelector('.button-remove') as HTMLButtonElement;
+  const appContainer = document.querySelector('.tasks-container') as HTMLElement;
+  const info = document.querySelector('.info') as HTMLElement;
+  
+  let tasksList: Task[] = [];
+  
+  const buildTask = () => {
+    if (tasksList.length >= 0) {
+      info.style.display = 'none';
+    }
+  
     const taskContainer = document.createElement('div');
-        appContainer.appendChild(taskContainer);  
-        taskContainer.classList.add('task');
-        taskContainer.classList.add('draggable');
-        taskContainer.setAttribute("draggable", true);
-        
+    appContainer.appendChild(taskContainer);
+    taskContainer.classList.add('task');
+    taskContainer.classList.add('draggable');
+    taskContainer.setAttribute('draggable', 'true');
+  
     const checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-        taskContainer.appendChild(checkbox);
-        checkbox.id = 'task__checkbox';
-
-    const grabTask = document.createElement('div')
-        taskContainer.appendChild(grabTask)
-        grabTask.classList.add('task__drag')
-
-    const grabLine = document.createElement('span')
-        grabTask.appendChild(grabLine)
-        grabLine.classList.add('drag__line')
-    
-
+    checkbox.type = 'checkbox';
+    taskContainer.appendChild(checkbox);
+    checkbox.id = 'task__checkbox';
+  
+    const grabTask = document.createElement('div');
+    taskContainer.appendChild(grabTask);
+    grabTask.classList.add('task__drag');
+  
+    const grabLine = document.createElement('span');
+    grabTask.appendChild(grabLine);
+    grabLine.classList.add('drag__line');
+  
     const taskValue = document.createElement('textarea');
-        taskContainer.appendChild(taskValue);
-        taskValue.classList.add('task__input');
-
+    taskContainer.appendChild(taskValue);
+    taskValue.classList.add('task__input');
+  
     const priority = document.createElement('div');
-        taskContainer.appendChild(priority);
-        priority.classList.add('task__priority');
-
-    saveTask(taskContainer, checkbox, priority)
-    dragTask()
-}
-
-const dragTask = () =>{
-    const taskItem = document.querySelectorAll('.task')
-    const graber = document.querySelectorAll('.task__drag')
-    taskItem.forEach(draggable =>{
-        draggable.addEventListener('dragstart', ()=>{
-            draggable.classList.add('dragging')
-        })
-        draggable.addEventListener('dragend', ()=>{
-            draggable.classList.remove('dragging')
-            
-        })
-    })
-        appContainer.addEventListener('dragover', (e) =>{
-            e.preventDefault()
-            const afterElement = getDragAfterElement(e.clientY)
-            const draggable = document.querySelector('.dragging')
-            if(afterElement == null){
-                appContainer.appendChild(draggable)
-            }
-            else{
-                appContainer.insertBefore(draggable, afterElement)
-            }
-        });
-}
+    taskContainer.appendChild(priority);
+    priority.classList.add('task__priority');
+  
+    saveTask(taskContainer, checkbox, priority);
+    dragTask();
+  };
+  
+  const dragTask = () => {
+    const taskItem = document.querySelectorAll('.task');
+    const graber = document.querySelectorAll('.task__drag');
+    taskItem.forEach(draggable => {
+      draggable.addEventListener('dragstart', () => {
+        draggable.classList.add('dragging');
+      });
+      draggable.addEventListener('dragend', () => {
+        draggable.classList.remove('dragging');
+      });
+    });
+  
+    appContainer.addEventListener('dragover', e => {
+      e.preventDefault();
+      const afterElement = getDragAfterElement(e.clientY);
+      const draggable = document.querySelector('.dragging');
+      if (afterElement === null) {
+        appContainer.appendChild(draggable);
+      } else {
+        appContainer.insertBefore(draggable, afterElement);
+      }
+    });
+  };
 
 const getDragAfterElement = (y) =>{
     const draggableElements = [...appContainer.querySelectorAll('.draggable:not(.dragging)')]
@@ -86,34 +91,28 @@ const saveTask = (taskContainer: HTMLDivElement, checkbox: HTMLElement, priority
         priority: priority
     }        
     tasksList.push(taskObj)
-    //  tasksList[0].task.style.marginTop = "0px"
 }
 
-const removeTask = () =>{
-    // if(6 >= tasksList.length){
-    //     appContainer.style.overflowY = '';
-    //     appContainer.style.overflowX = '';
-    // }
+const removeTask = (): void => {
     tasksList = tasksList.filter(item => {
-        if (item.isDone.checked) {
-          item.task.remove();
-          return false;
-        }
-        return true;
-      });
-}
-
-addTaskBtn.addEventListener('click', buildTask);
-removeTaskBtn.addEventListener('click', removeTask);
-
-const controlBar = document.querySelector('.control-bar')
-document.addEventListener('scroll', () => {
-    if(window.scrollY >= 165){
-        controlBar.style.position = 'fixed'
-        controlBar.style.zIndex = '100'
-        controlBar.style.top = '0'
+      if (item.isDone.checked) {
+        item.task.remove();
+        return false;
+      }
+      return true;
+    });
+  };
+   
+  const controlBar = document.querySelector('.control-bar') as HTMLElement;
+  document.addEventListener('scroll', (): void => {
+    if (window.scrollY >= 165) {
+      controlBar.style.position = 'fixed';
+      controlBar.style.zIndex = '100';
+      controlBar.style.top = '0';
+    } else {
+      controlBar.style.position = '';
     }
-    else{
-        controlBar.style.position = ''
-    }
-})
+  });
+
+  addTaskBtn.addEventListener('click', buildTask);
+  removeTaskBtn.addEventListener('click', removeTask);
