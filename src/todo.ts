@@ -113,5 +113,6 @@ document.addEventListener('scroll', (): void => {
       controlBar.style.position = '';
     }
 });
+
 addTaskBtn.addEventListener('click', buildTask);
 removeTaskBtn.addEventListener('click', removeTask);
