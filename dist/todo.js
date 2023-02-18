@@ -31,6 +31,17 @@ const buildTask = () => {
     priority.classList.add('task__priority');
     saveTask(taskContainer, checkbox, priority);
     dragTask();
+    resizeTask();
+};
+const resizeTask = () => {
+    const input = [...document.querySelectorAll('textarea')];
+    input.forEach(item => {
+        item.addEventListener('keyup', e => {
+            item.style.height = "auto";
+            let scHeight = e.target.scrollHeight;
+            item.style.height = `${scHeight}px`;
+        });
+    });
 };
 const dragTask = () => {
     const taskItem = document.querySelectorAll('.task');
