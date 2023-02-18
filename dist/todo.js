@@ -5,6 +5,7 @@ const appContainer = document.querySelector('.tasks-container');
 const info = document.querySelector('.info');
 let tasksList = [];
 const buildTask = () => {
+    console.log('BUDUJE');
     if (tasksList.length >= 0) {
         info.style.display = 'none';
     }
@@ -109,3 +110,6 @@ document.addEventListener('scroll', () => {
 });
 addTaskBtn.addEventListener('click', buildTask);
 removeTaskBtn.addEventListener('click', removeTask);
+var colorCodes = {
+    back: addTaskBtn
+};

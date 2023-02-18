@@ -12,6 +12,7 @@ interface Task {
   let tasksList: Task[] = [];
   
   const buildTask = () => {
+    console.log('BUDUJE')
     if (tasksList.length >= 0) {
       info.style.display = 'none';
     }
@@ -128,3 +129,9 @@ document.addEventListener('scroll', (): void => {
 
 addTaskBtn.addEventListener('click', buildTask);
 removeTaskBtn.addEventListener('click', removeTask);
+
+
+
+var colorCodes = {
+  back  : addTaskBtn
+};
