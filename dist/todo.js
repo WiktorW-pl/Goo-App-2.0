@@ -110,6 +110,3 @@ document.addEventListener('scroll', () => {
 });
 addTaskBtn.addEventListener('click', buildTask);
 removeTaskBtn.addEventListener('click', removeTask);
-var colorCodes = {
-    back: addTaskBtn
-};

@@ -129,9 +129,3 @@ document.addEventListener('scroll', (): void => {
 
 addTaskBtn.addEventListener('click', buildTask);
 removeTaskBtn.addEventListener('click', removeTask);
-
-
-
-var colorCodes = {
-  back  : addTaskBtn
-};
