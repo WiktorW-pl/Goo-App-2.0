@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/main-page.css">
+    <link rel="stylesheet" href="styles/index.css">
     <title>Document</title>
 </head>
-<body>
+<body data-barba="wrapper">
     <header>
         <img class="header__logo" src="img/main_logo.png" alt="">
     </header>
-    <div class="container">
-        <div class="app">1</div>
-        <div class="app">2</div>
-        <div class="app">3</div>
-    </div>
+    <main data-barba="container" data-barba-namespace="home">
+        <div class="container">
+            <div class="app"><a href="/html/todo.html">Todo</a></div>
+            <div class="app">Notes</div>
+            <div class="app">Expenses</div>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="index.js" type="module"></script>
 </body>
 </html>
