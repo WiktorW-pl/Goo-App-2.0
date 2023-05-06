@@ -16,6 +16,47 @@ header{
     height: 100px;
     margin: 0;
 }
+
+.logo{
+    width: 100%;
+    margin-top: 30px;
+    &__img{
+        height: auto;
+        max-width: 300px;
+    }
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.button-switch{
+    width: 200px;
+    height: 45px;
+    background-color: #232323;
+    border: 4px solid #fff;
+    color: #fff;
+    font-size: 17px;
+    font-family: 'Fira Code';
+    font-weight: 500;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+.button-switch:hover{
+    background-color: #fff;
+    border: #232323 4px solid;
+    color: #232323;
+}
+
+nav{
+    display: none;
+}
+
+.hamburger, .hamburger-navigation {
+    display: none;
+}
+
 .content{
     width: 100%;
     height: 80vh;
@@ -24,6 +65,7 @@ header{
     justify-content: center;
     align-items: center;
 }
+
 .app{
     width: 480px;
     height: 80vh;
@@ -73,12 +115,15 @@ header{
 .app:nth-child(1){
     border-right: none;
 }
+
 .app:nth-child(3){
     border-left: none;
 }
+
 .app:nth-child(2n+1){
     height: 75%;
 }
+
 #icon-main{
     transform: translateY(-10px);
 }
@@ -87,12 +132,26 @@ header{
     body{
         margin: 0;
     }
+    
+    .logo{
+        width: 100%;
+        margin-top: 0px;
+        display: flex;
+        height: 100px;
+        align-items: center;
+        &__img{
+            height: auto;
+            max-width: 200px;
+        }
+    }
+
     .content{
         width: 100%;
         height: auto;
         flex-direction: column;
         align-items: center;
     }
+
     .app{
         width: 100%;
         height: auto;
@@ -127,29 +186,122 @@ header{
         }
         &__icon{
             max-width: 75px;
-            // margin-top: 30px;
         }
     }
+
     .app:nth-child(1){
         border-right: none;
         border-left: none;
         border-bottom: none;
     }
+
     .app:nth-child(even){
         border-right: none;
         border-left: none;
     }
+
     .app:nth-child(3){
         border: none;
     }
+
     .app:nth-child(2n+1){
         height: 75%;
     }
+
     #icon-main{
         transform: translateY(-10px);
         margin-top: 30px;
     }
+
     #last-icon{
         margin-top: 20px;
     }
+
+    nav{
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+      }
+      .nav-list {
+        display: none;
+      }
+      .hamburger, .hamburger-navigation {
+        transition: transform 0.2s 0.1s ease-in-out;
+      }
+      .hamburger--active {
+        transform: translateX(-250px);
+      }
+      .hamburger__box {
+        width: 35px;
+        height: 24px;
+        display: inline-block;
+        position: relative;
+      }
+      .hamburger__inner {
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: background-color 0.3s 0.2s ease-in-out;
+      }
+      .hamburger__inner::before,
+    .hamburger__inner::after {
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        position: absolute;
+        content: "";
+        left: 0;
+        transition: transform 0.3s 0.2s ease-in-out;
+      }
+      .hamburger__inner::before {
+        top: -10px;
+      }
+      .hamburger__inner::after {
+        top: 10px;
+      }
+      .hamburger--active .hamburger__inner {
+        background-color: transparent;
+      }
+      .hamburger--active .hamburger__inner::before {
+        transform: translateY(10px) rotate(45deg);
+        background-color: red;
+        height: 6px;
+      }
+      .hamburger--active .hamburger__inner::after {
+        transform: translateY(-10px) rotate(-45deg);
+        background-color: red;
+        height: 6px;
+      }
+      .hamburger-navigation {
+        height: 100vh;
+        width: 250px;
+        background-color: #2b2b2b;
+        box-shadow: inset 4px 0px 0px #fff;
+        position: absolute;
+        z-index: 100;
+        top: 0;
+        right: 0;
+        transform: translateX(250px);
+      }
+      .hamburger-navigation--active {
+        transform: translateX(0px);
+        display: block;
+      }
+      .hamburger-list {
+        list-style: none;
+        margin-top: 50px;
+        margin-left: 20px;
+      }
+      .hamburger-list__item {
+        margin-bottom: 20px;
+      }
 }
