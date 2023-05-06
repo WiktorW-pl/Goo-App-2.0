@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/img/main-logo.png">
+    <link rel="stylesheet" href="../styles/todo_1.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <title>Goo App</title>
+</head>
+<body data-barba="wrapper">
+    <main data-barba="container" data-barba-namespace="home-section">
+    <header>
+        <div class="logo">
+            <svg width="365" height="156" viewBox="0 0 365 156" fill="none" class="logo logo__svg" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_d_0_1)">
+                        <path d="M141.953 37.7832C136.326 28.0371 128.54 19.7102 119.194 13.4416C109.848 7.17307 99.1893 3.1297 88.0369 1.62195C76.8846 0.114213 65.5351 1.1822 54.8598 4.74392C44.1845 8.30565 34.4674 14.2664 26.4545 22.1684C18.4417 30.0704 12.3463 39.7036 8.63627 50.3283C4.92626 60.953 3.70036 72.2865 5.05268 83.4588C6.405 94.631 10.2996 105.345 16.4374 114.777C22.5752 124.21 30.793 132.111 40.4598 137.873L60.8569 103.653C56.4189 101.008 52.6461 97.3807 49.8282 93.0501C47.0103 88.7196 45.2223 83.8008 44.6014 78.6717C43.9806 73.5425 44.5434 68.3392 46.2467 63.4614C47.9499 58.5836 50.7484 54.161 54.4271 50.5331C58.1058 46.9053 62.5669 44.1687 67.468 42.5335C72.369 40.8983 77.5796 40.408 82.6997 41.1002C87.8197 41.7924 92.7131 43.6488 97.0039 46.5267C101.295 49.4046 104.869 53.2275 107.452 57.7019L141.953 37.7832Z" fill="white"/>
+                    </g>
+                    <g filter="url(#filter1_d_0_1)">
+                        <path d="M103.444 144.086C114.284 137.826 123.35 128.905 129.786 118.168C136.221 107.43 139.813 95.2286 140.223 82.7167L66.6115 80.3071L103.444 144.086Z" fill="white"/>
+                    </g>
+                    <g filter="url(#filter2_d_0_1)">
+                        <path d="M223.625 147.168C239.792 137.831 251.811 122.704 257.249 104.844C262.688 86.9842 261.141 67.7256 252.922 50.9629C244.702 34.2002 230.423 21.1846 212.973 14.5482C195.523 7.9119 176.204 8.1502 158.923 15.2149L176.876 59.1299C183.025 56.616 189.9 56.5312 196.109 58.8927C202.318 61.2541 207.399 65.8856 210.324 71.8503C213.249 77.8151 213.799 84.668 211.864 91.0232C209.929 97.3783 205.652 102.761 199.899 106.084L223.625 147.168Z" fill="white"/>
+                    </g>
+                    <g filter="url(#filter3_d_0_1)">
+                        <path d="M324.085 145.935C340.252 136.599 352.27 121.471 357.709 103.611C363.148 85.7517 361.601 66.493 353.381 49.7304C345.162 32.9677 330.883 19.952 313.433 13.3157C295.983 6.67936 276.664 6.91766 259.383 13.9824L277.336 57.8974C283.485 55.3835 290.359 55.2987 296.569 57.6601C302.778 60.0216 307.859 64.653 310.784 70.6178C313.709 76.5826 314.259 83.4355 312.324 89.7906C310.388 96.1458 306.112 101.529 300.359 104.851L324.085 145.935Z" fill="white"/>
+                    </g>
+                    <defs>
+                        <filter id="filter0_d_0_1" x="0.519043" y="0.958008" width="145.434" height="144.915" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset dy="4"/>
+                            <feGaussianBlur stdDeviation="2"/>
+                            <feComposite in2="hardAlpha" operator="out"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape"/>
+                        </filter>
+                        <filter id="filter1_d_0_1" x="62.6116" y="80.307" width="81.6111" height="71.7793" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset dy="4"/>
+                            <feGaussianBlur stdDeviation="2"/>
+                            <feComposite in2="hardAlpha" operator="out"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape"/>
+                        </filter>
+                        <filter id="filter2_d_0_1" x="154.923" y="9.73804" width="109.521" height="145.43" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset dy="4"/>
+                            <feGaussianBlur stdDeviation="2"/>
+                            <feComposite in2="hardAlpha" operator="out"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape"/>
+                        </filter>
+                            <filter id="filter3_d_0_1" x="255.383" y="8.50549" width="109.521" height="145.43" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset dy="4"/>
+                            <feGaussianBlur stdDeviation="2"/>
+                            <feComposite in2="hardAlpha" operator="out"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape"/>
+                        </filter>
+                    </defs>
+                </svg>
+                
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li class="nav-list__element"><a href="../../index.html" data-cy="back-to-main-page-btn">Back to main page</a></li>       
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+    <div class="content content-todo" data-router-view="home">
+       <span class="content__icon">
+           <svg width="94" height="94" viewBox="0 0 94 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_i_12_253)">
+            <path d="M78.3334 11.75H74.4167V3.91669H66.5834V11.75H27.4167V3.91669H19.5834V11.75H15.6667C11.3584 11.75 7.83337 15.275 7.83337 19.5834V82.25C7.83337 86.5583 11.3584 90.0834 15.6667 90.0834H78.3334C82.6417 90.0834 86.1667 86.5583 86.1667 82.25V19.5834C86.1667 15.275 82.6417 11.75 78.3334 11.75ZM78.3334 82.25H15.6667V31.3334H78.3334V82.25Z" fill="white"/>
+            </g>
+            <defs>
+            <filter id="filter0_i_12_253" x="0" y="0" width="94" height="98" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset dy="4"/>
+            <feGaussianBlur stdDeviation="2"/>
+            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+            <feBlend mode="normal" in2="shape" result="effect1_innerShadow_12_253"/>
+            </filter>
+            </defs>
+        </svg>
+            <h1 class="content__title">TO-DO</h1>
+        </span> 
+        <h2 class="info"></h2>
+        <div class="app-todo" style="overflow-y: scroll; overflow-x: hidden;">
+            <!-- <div class="task">
+               <textarea  class="task__input" placeholder="">dsadas</textarea><div id="color"></div>
+               <input class="task__checkbox" type="checkbox" name="" id=""> 
+            </div>  -->
+             <!-- 
+            <div class="task">
+               <input class="task__input" type="text"><input class="task__checkbox" type="checkbox" name="" id="">
+            </div> -->
+        </div>
+        <div class="buttons">      
+            <div class="add-btn">
+                <svg id="button-add" data-cy="button-add" width="51" height="51" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_i_12_268)">
+                    <path d="M33.0417 17.7917H27.9584V27.9584H17.7917V33.0417H27.9584V43.2084H33.0417V33.0417H43.2084V27.9584H33.0417V17.7917ZM30.5 5.08337C16.47 5.08337 5.08337 16.47 5.08337 30.5C5.08337 44.53 16.47 55.9167 30.5 55.9167C44.53 55.9167 55.9167 44.53 55.9167 30.5C55.9167 16.47 44.53 5.08337 30.5 5.08337ZM30.5 50.8334C19.2913 50.8334 10.1667 41.7088 10.1667 30.5C10.1667 19.2913 19.2913 10.1667 30.5 10.1667C41.7088 10.1667 50.8334 19.2913 50.8334 30.5C50.8334 41.7088 41.7088 50.8334 30.5 50.8334Z" fill="white"/>
+                    </g>
+                    <defs>
+                    <filter id="filter0_i_12_268" x="0" y="0" width="61" height="65" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feOffset dy="4"/>
+                    <feGaussianBlur stdDeviation="2"/>
+                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow_12_268"/>
+                    </filter>
+                    </defs>
+                </svg>      
+            </div>
+            <div class="remove-btn">
+                    <svg id="button-remove" data-cy="button-remove" width="35" height="39" viewBox="0 0 40 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_i_12_271)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M38.0317 7.13453C38.8875 7.13453 39.6 7.84512 39.6 8.74931V9.5853C39.6 10.4675 38.8875 11.2001 38.0317 11.2001H1.57048C0.712492 11.2001 0 10.4675 0 9.5853V8.74931C0 7.84512 0.712492 7.13453 1.57048 7.13453H7.98504C9.28807 7.13453 10.4221 6.20834 10.7152 4.90155L11.0511 3.40117C11.5732 1.35739 13.2913 0 15.2576 0H24.3424C26.2873 0 28.0247 1.35739 28.5275 3.29337L28.8869 4.89935C29.1779 6.20834 30.3119 7.13453 31.6171 7.13453H38.0317ZM34.7729 37.6949C35.4426 31.4535 36.6151 16.6257 36.6151 16.4761C36.6579 16.0229 36.5102 15.5939 36.2171 15.2485C35.9026 14.9251 35.5046 14.7337 35.066 14.7337H4.55079C4.11003 14.7337 3.69066 14.9251 3.39967 15.2485C3.10441 15.5939 2.95891 16.0229 2.98031 16.4761C2.98424 16.5036 3.02631 17.0259 3.09665 17.8991C3.40912 21.7783 4.27941 32.5824 4.84177 37.6949C5.23974 41.4613 7.711 43.8284 11.2906 43.9142C14.0528 43.978 16.8985 44 19.8084 44C22.5492 44 25.3329 43.978 28.1807 43.9142C31.8844 43.8504 34.3535 41.525 34.7729 37.6949Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <filter id="filter0_i_12_271" x="0" y="0" width="39.6" height="48" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dy="4"/>
+                        <feGaussianBlur stdDeviation="2"/>
+                        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                        <feBlend mode="normal" in2="shape" result="effect1_innerShadow_12_271"/>
+                        </filter>
+                        </defs>
+                    </svg>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="side-note-panel">
+        <button class="add-note">Add side note</button>
+        <button class="remove-note">Remove side note</button>
+    </div>
+    </div>
+    </main>
+    <script src="../dist/todo-1.js"></script>
+</body>
+</html>

@@ -1,47 +1,57 @@
 body {
-  background-color: #2B2D42;
-  color: #000;
+  background-color: #232323;
+  color: #fff;
   font-family: Fira Code;
   margin: 0;
 }
 
 header {
-  max-width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  margin: 0;
 }
 
-.header__logo {
-  max-width: 100%;
-}
-
-.container {
-  margin-top: 30px;
-  max-width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.app {
-  width: 300px;
-  height: 300px;
-  border: #D9D9D9 3px solid;
+.content {
+  width: 100%;
+  height: 80vh;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #D9D9D9;
-  font-size: 70px;
-  margin-bottom: 30px;
 }
 
-.app:nth-child(2) {
-  margin: 0px 30px 30px 30px;
+.app {
+  width: 480px;
+  height: 80vh;
+  border: 5px solid #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.app__text-container {
+  transform: translateY(-25px);
+}
+.app__title {
+  font-size: 64px;
+}
+.app__text {
+  font-size: 18px;
+  transform: translateY(-25px);
 }
 
-.app:hover {
-  background-color: #D9D9D9;
-  color: #2B2D42;
-  cursor: pointer;
+.app:nth-child(1) {
+  border-right: none;
+}
+
+.app:nth-child(3) {
+  border-left: none;
+}
+
+.app:nth-child(2n+1) {
+  height: 75%;
 }/*# sourceMappingURL=index.css.map */

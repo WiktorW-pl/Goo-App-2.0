@@ -4,17 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./img/main-logo.png">
     <link rel="stylesheet" href="styles/index.css">
-    <title>Document</title>
+    <title>Goo App</title>
 </head>
 <body>
     <header>
-        <img class="header__logo" src="img/main_logo.png" alt="">
-    </header>
-        <div class="container">
-            <div class="app"><a href="/html/todo.html">Todo</a></div>
-            <div class="app">Notes</div>
-            <div class="app">Expenses</div>
+        <div class="logo">
+           
         </div>
+        <!-- <nav>
+            <button class="hamburger">
+                <span class="hamburger__box">
+                    <span class="hamburger__inner"></span>
+                </span>
+            </button>
+            <div class="hamburger-navigation">
+             <ul class="hamburger-list">
+                 <li class="hamburger-list__item"><a href="index.html" class="tools-hamburger">Tools</a></li>
+                 <li class="hamburger-list__item"><a href="games.html" class="games-hamburger">Games</a></li>
+                 <li class="hamburger-list__item"><a href="info.html" class="info-hamburger">Information</a></li>
+             </ul>
+            </div>
+            <ul class="nav-list">
+                <li class="nav-list__element nav-list__element--active" id="tools-button" data-cy="tools-button"><a class="nav-list__link nav-list__link--active" href="index.html">Tools</a></li>
+                <li class="nav-list__element" id="games-button" data-cy="games-button"><a class="nav-list__link" href="games.html">Games</a></li>
+                <li class="nav-list__element" id="info-button"><a href="info.html" class="nav-list__link">Information</a></li>
+            </ul>
+        </nav> -->
+    </header>
+    <div class="content">
+        <div class="app" id="sub-app">
+            <div class="app__text-container">
+                <h2 class="app__title">To-do 1</h1>
+                <p class="app__text">Simpler to-do list application with sticky note functionality.</p>
+            </div>
+            <div class="app__button">
+                <button class="app__button">Get started</button>     
+            </div>
+            <div class="app__link">         
+                <p class="app__view-code">View code</p>
+            </div> 
+        </div>
+        <div class="app" id="main-app">
+            <div class="app__text-container">
+                <h2 class="app__title">To-do 2</h1>
+                <p class="app__text">Todo list application with drag'n drop functionality</p>
+            </div>
+            <div class="app__button">
+            <button class="app__button" id="go-to-todo">Get started</button>   
+            </div>         
+            <div class="app__link">         
+                <p class="app__view-code">View code</p>
+            </div> 
+        </div>
+        <div class="app" id="sub-app">
+            <div class="app__text-container">
+                <h2 class="app__title">Notes</h1>
+                <p class="app__text">Notes application with the ability to download your notes in various formats.</p>
+            </div>
+            <div class="app__button">
+                <button class="app__button">Get started</button>     
+            </div>        
+            <div class="app__link">         
+                <p class="app__view-code">View code</p>
+            </div> 
+        </div>
+    </div>
+    <!-- <script src="main.js"></script> -->
 </body>
 </html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/img/main-logo.png">
+    <link rel="stylesheet" href="../styles/todo2.css">
+    <!-- <link rel="manifest" href="manifest.json"> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <title>Goo App</title>
+</head>
+<body>
+    <header class="header">
+        <img class="header__img" src="../img/main_logo.png" alt="">
+        <button class="nav-button"> <a href="../index.html">Back to main page</a></button>
+    </header>
+    <main>
+    <div class="center"> 
+        <div class="control-bar">
+            <div class="control-bar__list">
+                <select class="list buttons" name="list"> 
+                    <option value="current" name="list" id="list__current">#1 list</option>
+                    <option value="new" name="list" id="list__new">New</option>
+                </select>
+            </div>
+            <button class="control-bar__list" id="create-new">Create new</button>
+            <div class="control-bar__buttons">
+                <button class="buttons button-add"> <img class="buttons__img add" src="../img/icons/icon-add.svg" alt=""> </button>
+                <button class="buttons button-remove"><img class="buttons__img remove" src="../img/icons/icon-remove.svg" alt=""></button>
+            </div>
+        </div>
+    </div>
+    <div class="center">
+        <div class="tasks-container" >
+            <p class="info">Your list is currently empty</p>
+        </div>
+    </div>  
+    <footer></footer>
+    </main>
+    <script src="../dist/todo-2.js"></script>
+</body>
+</html>
