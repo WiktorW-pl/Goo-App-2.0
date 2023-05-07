@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="shortcut icon" href="./img/main-logo.png">
     <link rel="stylesheet" href="styles/index.css">
     <title>Goo App</title>
@@ -25,9 +26,7 @@
             </button>
             <div class="hamburger-navigation">
              <ul class="hamburger-list">
-                 <li class="hamburger-list__item"><a href="index.html" class="tools-hamburger">Tools</a></li>
-                 <li class="hamburger-list__item"><a href="games.html" class="games-hamburger">Games</a></li>
-                 <li class="hamburger-list__item"><a href="info.html" class="info-hamburger">Information</a></li>
+                 <li class="hamburger-list__item" id="btnSwitchHamburger">Tools</li>
              </ul>
             </div>
             <ul class="nav-list">
@@ -67,6 +66,47 @@
         <div class="app" id="sub-app">
             <div class="app__text-container">
                 <h2 class="app__title">Notes</h1>
+                <p class="app__text">Notes application with the ability to download your notes in various formats.</p>
+            </div>
+            <div class="app__content">
+                <button class="app__button">Get started</button>
+                <img class="app__icon" id="last-icon" src="img/icons/notes.webp" alt="app icon"/>
+            </div>        
+            <div class="app__link">         
+                <p class="app__view-code">View code</p>
+            </div> 
+        </div>
+    </div>
+    <div class="content-games">
+        <div class="app" id="sub-app">
+            <div class="app__text-container">
+                <h2 class="app__title">Aim trainer</h1>
+                <p class="app__text">Simpler to-do list application with sticky note functionality.</p>
+            </div>
+            <div class="app__content">
+                <button class="app__button">Get started</button>     
+                <img class="app__icon" src="img/icons/todo1.webp" alt="app icon"/>
+            </div>
+            <div class="app__link">         
+                <p class="app__view-code">View code</p>
+            </div> 
+        </div>
+        <div class="app" id="main-app">
+            <div class="app__text-container">
+                <h2 class="app__title">Rock paper scissors</h1>
+                <p class="app__text">Todo list application with drag'n drop functionality</p>
+            </div>
+            <div class="app__content" id="app-main">
+                <button class="app__button" id="go-to-todo">Get started</button>
+                <img class="app__icon" id="icon-main" src="img/icons/todo2.webp" alt="app icon"/>
+            </div>         
+            <div class="app__link">         
+                <p class="app__view-code">View code</p>
+            </div> 
+        </div>
+        <div class="app" id="sub-app">
+            <div class="app__text-container">
+                <h2 class="app__title">Tic-tac-toe</h1>
                 <p class="app__text">Notes application with the ability to download your notes in various formats.</p>
             </div>
             <div class="app__content">

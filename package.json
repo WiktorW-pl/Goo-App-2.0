@@ -20,6 +20,6 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "gsap": "^3.11.4"
+    "gsap": "^3.11.5"
   }
 }
