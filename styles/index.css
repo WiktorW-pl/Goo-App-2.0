@@ -118,10 +118,15 @@ nav {
   font-family: "Fira Code";
   font-weight: 500;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
 .app__icon {
   max-width: 95px;
   margin: 10px;
+}
+
+.app__button:hover {
+  background-color: #a1a1a1;
 }
 
 .app:nth-child(1) {
