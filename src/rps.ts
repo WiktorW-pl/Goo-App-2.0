@@ -1,12 +1,12 @@
-const option = Array.from([...document.querySelectorAll(".option")]) as HTMLElement[];
-const btn = document.querySelector('button');
-const gamesDisplay = document.querySelector('#games');
-const winsDisplay = document.querySelector('#wins');
-const lossesDisplay = document.querySelector('#losess');
-const drawsDisplay = document.querySelector('#draws');
-const playerPickDisplay = document.querySelector('#player-pick');
-const aiPickDisplay = document.querySelector('#ai-pick');
-const winnerDisplay = document.querySelector('#winner');
+const option = Array.from([...document.querySelectorAll(".option__img")]) as HTMLElement[];
+const btn = document.querySelector('.btn');
+const gamesDisplay = document.querySelector('.stats__number-of-games');
+const winsDisplay = document.querySelector('.stats__number-of-wins');
+const lossesDisplay = document.querySelector('.stats__number-of-losses');
+const drawsDisplay = document.querySelector('.stats__number-of-draws');
+const playerPickDisplay = document.querySelector('.summary__player-selection');
+const aiPickDisplay = document.querySelector('.summary__computer-selection');
+const winnerDisplay = document.querySelector('.summary__game-winner');
 
 const gameProps: {
     playerPick: string | null,
@@ -29,11 +29,12 @@ const gameProps: {
 const ai = () =>{
     const aiChoice : number = Math.floor(Math.random() * 3);
     gameProps.aiPick = option[aiChoice].getAttribute('alt')
+    console.log(option[1].getAttribute('alt'))
 }
     option.forEach((item) =>{
         item.addEventListener('click', ()=>{ 
             for (let picked of option ){
-                picked.style.backgroundColor = 'red'
+                picked.style.backgroundColor = ''
             }
             item.style.backgroundColor = 'green'
             gameProps.playerPick = item.getAttribute('alt')
@@ -43,7 +44,7 @@ const compareSelection = () =>{
     gameProps.games++;
     if(gameProps.playerPick === ''){
         gameProps.games--;
-        alert('Wybierz łapkę mordko')
+        alert('Choose your option')
          return;
     } 
     if(gameProps.playerPick === gameProps.aiPick){
@@ -61,13 +62,13 @@ const compareSelection = () =>{
 }
 
 const displayStats = () =>{
-    gamesDisplay && (gamesDisplay.textContent = gameProps.winner);
-    winsDisplay && (winsDisplay.textContent = gameProps.wins.toString());
-    lossesDisplay && (lossesDisplay.textContent = gameProps.losses.toString());
-    drawsDisplay && (drawsDisplay.textContent = gameProps.draws.toString());
-    playerPickDisplay && (playerPickDisplay.textContent = gameProps.playerPick);
-    aiPickDisplay && (aiPickDisplay.textContent = gameProps.aiPick);
-    winnerDisplay && (winnerDisplay.textContent = gameProps.winner);
+    gamesDisplay.textContent = `Number of games played: ${gameProps.games}`;
+    winsDisplay.textContent = `Number of games wins: ${gameProps.wins}`;
+    lossesDisplay.textContent = `Number of games losses: ${gameProps.losses}`;
+    drawsDisplay.textContent = `Number of games draws: ${gameProps.draws}`;
+    playerPickDisplay.textContent = `Player's choice: ${gameProps.playerPick}`;
+    aiPickDisplay.textContent = `Computer's choice: ${gameProps.aiPick}`;
+    winnerDisplay.textContent = `Game winner: ${gameProps.winner}`;
 }
 
 const startGame = () =>{

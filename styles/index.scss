@@ -66,8 +66,6 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    // display: none;
-    //Jak wchodzi tools to te style oprócz display none muszą zejść i wejść na games, a jak tools wchodzi, to te style muszą tu wejść a zejść z games
 }
 
 .content-games{
@@ -78,7 +76,6 @@ nav{
     justify-content: center;
     align-items: center;
     display: none;
-    //Jak wchodzi games to te commented style muszą tu wejść, a jak schodzi to muszą te style też zejść
 }
 
 .app{
