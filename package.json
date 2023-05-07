@@ -3,9 +3,7 @@
   "version": "3.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/WiktorW-pl/Goo-App.git"
@@ -17,9 +15,11 @@
   },
   "homepage": "https://github.com/WiktorW-pl/Goo-App-#readme",
   "devDependencies": {
+    "@playwright/test": "^1.33.0",
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "gsap": "^3.11.5"
+    "gsap": "^3.11.5",
+    "playwright": "^1.33.0"
   }
 }

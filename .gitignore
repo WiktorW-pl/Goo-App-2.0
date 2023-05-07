@@ -1,3 +1,6 @@
 node_modules
 package-lock.json
 readme-images
+/test-results/
+/playwright-report/
+/playwright/.cache/
