@@ -145,6 +145,11 @@ nav {
   transform: translateY(-10px);
 }
 
+@media only screen and (max-width: 1193px) {
+  .button-switch {
+    font-size: 15px;
+  }
+}
 @media only screen and (max-width: 1005px) {
   body {
     margin: 0;

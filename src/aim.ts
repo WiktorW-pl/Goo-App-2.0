@@ -9,6 +9,7 @@ let blink_time = 1000
 let points = 0
 
 const start_game = () => {
+    console.log('dupa')
     generate_point()
 } 
 
@@ -45,6 +46,7 @@ const set_game_props = (difficulty_name : string) =>{
     }
 }
 const move_point = (created_dot : HTMLElement) => {
+    
     is_game_started = true
     const game_interval = setInterval(()=>{
         created_dot.style.display = 'block';

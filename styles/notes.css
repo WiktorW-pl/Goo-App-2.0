@@ -42,10 +42,7 @@ header {
   cursor: pointer;
 }
 .nav-list__element:hover {
-  background-color: #ffffff;
-}
-.nav-list__element:hover a:hover {
-  color: #232323;
+  background-color: #2c2c2c;
 }
 
 .switch-content {

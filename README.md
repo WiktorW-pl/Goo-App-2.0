@@ -45,7 +45,6 @@ GooApp 2.0 contains 6 projects, some of which are written using TypeScript. I di
 
 ## What I have learned?
 1. Better understand of core concepts in JavaScript
-2. Using local storage, How to integrate with Firebase (These features are coming soon!)
 3. How to make e2e tests via playwright (Coming soon)
 4. How to maintain proper project structure
 5. Basics of TypeScript
@@ -57,15 +56,15 @@ GooApp 2.0 contains 6 projects, some of which are written using TypeScript. I di
 
 Technologies that I used in this project:
 
- [![JavaScript][JavaScript]][JavaScript-url]
-
- [![Netlify][netlify.com]][netlify-url]
-
  [![HTML][html.com]][html-url]
 
  [![CSS3][css.com]][css-url]
 
  [![SCSS][sass.com]][sass-url]
+
+ [![JavaScript][JavaScript]][JavaScript-url]
+
+ [![Netlify][netlify.com]][netlify-url]
 
  [![MarkDown][markdown.com]][markdown-url]
 
@@ -136,7 +135,7 @@ Project Link: [https://github.com/WiktorW-pl/Goo-App](https://github.com/WiktorW
 [sass-url]: https://sass-lang.com/
 [netlify.com]: https://img.shields.io/badge/TypeScript-007acc?style=for-the-badge&logo=typescript&logoColor=white
 [netlify-url]: https://www.typescriptlang.org/
-[markdown.com]: https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white
-[markdown-url]: https://www.markdownguide.org/
+[markdown.com]: https://img.shields.io/badge/PlayWright-32a852?style=for-the-badge&logo=playwright&logoColor=white
+[markdown-url]: https://playwright.dev/
 [css.com]: https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
 [css-url]: https://developer.mozilla.org/en-US/docs/Web/CSS

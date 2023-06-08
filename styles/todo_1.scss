@@ -37,11 +37,7 @@ header{
         cursor: pointer;
     }
     &__element:hover{
-        background-color: #ffffff;
-        a:hover{
-            color: $main-color;
-        }
-
+        background-color: #414141;
     }
 }
 .content-todo{

@@ -8,6 +8,7 @@ let difficulty_name;
 let blink_time = 1000;
 let points = 0;
 const start_game = () => {
+    console.log('dupa');
     generate_point();
 };
 const generate_point = () => {

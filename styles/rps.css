@@ -53,10 +53,7 @@ header {
   cursor: pointer;
 }
 .nav-list__element:hover {
-  background-color: #ffffff;
-}
-.nav-list__element:hover a:hover {
-  color: #232323;
+  background-color: #2e2e2e;
 }
 
 .content {
@@ -252,26 +249,7 @@ a {
     transform: translate(-50%, -39%);
   }
   .title {
-    display: flex;
-    justify-content: center;
-    margin: -150px 180px 0px 180px;
-  }
-  .title__icon {
-    width: 121px;
-    height: 121px;
-  }
-  .title__text {
-    font-family: Fira Code;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 34px;
-    line-height: 60px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: -4px;
-    text-transform: uppercase;
-    margin-left: 20px;
+    display: none;
   }
   .app {
     display: flex;
@@ -396,7 +374,7 @@ a {
     transform: translate(-50%, -25%);
   }
   .title {
-    display: flex;
+    display: none;
     justify-content: center;
     margin: -150px 180px 0px 180px;
   }

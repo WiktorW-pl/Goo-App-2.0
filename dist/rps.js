@@ -25,9 +25,10 @@ const ai = () => {
 option.forEach((item) => {
     item.addEventListener('click', () => {
         for (let picked of option) {
-            picked.style.backgroundColor = '';
+            picked.parentNode.style.backgroundColor = '';
         }
-        item.style.backgroundColor = 'green';
+        // item.style.backgroundColor = 'green'
+        item.parentNode.style.backgroundColor = 'green';
         gameProps.playerPick = item.getAttribute('alt');
     });
 });
